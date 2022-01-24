@@ -1,0 +1,77 @@
+@page {
+  size: letter;
+  margin: 3rem 6rem 3rem 6rem;
+}
+
+@media print {
+  html, body, *, p {
+    font-size: 12px;
+  }
+
+  .article__body p {
+    line-height: 1.5;
+  }
+  .article__footnotes div,
+  .article__footnotes p {
+    font-size: 0.75rem;
+  }
+
+  .header--fixed,
+  .header__inner--left,
+  .header__inner--right,
+  .sidebar,
+  .related,
+  .article__bottom-buttons,
+  .journalarticle__bottom-buttons,
+  .footer,
+  .print-hide {
+    display: none;
+  }
+
+  .header__inner {
+    height: 1.5rem;
+  }
+  .page-logo,
+  .header__inner--title {
+    font-size: 0.75rem;
+    color: #999999;
+  }
+  .article__header-top h1 {
+    font-size: 2.5rem;
+    padding-bottom: 0.75rem;
+  }
+  .article__header-top h2 {
+    font-size: 1.5rem;
+  }
+
+  .inline-media {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .inline-media--portrait .inline-media__wrapper,
+  .inline-media--portrait .inline-media__caption,
+  .inline-media--landscape .inline-media__wrapper,
+  .inline-media--landscape .inline-media__caption {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    margin-left: 20%;
+    height: auto;
+  }
+  :root {
+    --space-left: 0rem;
+    --space-right: 0rem;
+  }
+
+  .article__bottom {
+    display: grid;
+    font-size: 1rem;
+  }
+  .article__bottom-details {
+    column-count: 1;
+  }
+  .article__bottom-details > * {
+    padding-bottom: 1rem;
+  }
+
+}
